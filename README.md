@@ -1,1 +1,1 @@
-# WhoWantsToBeMillionaire
+# игра "Кто хочет стать миллионером"

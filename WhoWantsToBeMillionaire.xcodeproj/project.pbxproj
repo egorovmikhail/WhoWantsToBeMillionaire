@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8145FF162671F45400B7B3A9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8145FF152671F45400B7B3A9 /* Game.swift */; };
+		8145FF182671F46F00B7B3A9 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8145FF172671F46F00B7B3A9 /* GameSession.swift */; };
+		8145FF1A2672360600B7B3A9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8145FF192672360600B7B3A9 /* Question.swift */; };
+		8145FF1C267242A600B7B3A9 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8145FF1B267242A600B7B3A9 /* GameVC.swift */; };
+		8145FF1E267243DA00B7B3A9 /* ScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8145FF1D267243DA00B7B3A9 /* ScoreVC.swift */; };
+		8145FF202672443C00B7B3A9 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8145FF1F2672443C00B7B3A9 /* ScoreCell.swift */; };
 		81EBEC04266F89AE00270953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EBEC03266F89AE00270953 /* AppDelegate.swift */; };
 		81EBEC06266F89AE00270953 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EBEC05266F89AE00270953 /* SceneDelegate.swift */; };
-		81EBEC08266F89AE00270953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EBEC07266F89AE00270953 /* ViewController.swift */; };
+		81EBEC08266F89AE00270953 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EBEC07266F89AE00270953 /* MainVC.swift */; };
 		81EBEC0B266F89AE00270953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EBEC09266F89AE00270953 /* Main.storyboard */; };
 		81EBEC0D266F89AF00270953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81EBEC0C266F89AF00270953 /* Assets.xcassets */; };
 		81EBEC10266F89AF00270953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EBEC0E266F89AF00270953 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8145FF152671F45400B7B3A9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8145FF172671F46F00B7B3A9 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		8145FF192672360600B7B3A9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		8145FF1B267242A600B7B3A9 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		8145FF1D267243DA00B7B3A9 /* ScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVC.swift; sourceTree = "<group>"; };
+		8145FF1F2672443C00B7B3A9 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		81EBEC00266F89AE00270953 /* WhoWantsToBeMillionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoWantsToBeMillionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EBEC03266F89AE00270953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81EBEC05266F89AE00270953 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81EBEC07266F89AE00270953 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81EBEC07266F89AE00270953 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		81EBEC0A266F89AE00270953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81EBEC0C266F89AF00270953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81EBEC0F266F89AF00270953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		816B5C4626724E0D003E2DC9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81EBEC07266F89AE00270953 /* MainVC.swift */,
+				8145FF1B267242A600B7B3A9 /* GameVC.swift */,
+				8145FF1D267243DA00B7B3A9 /* ScoreVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		81EBEBF7266F89AE00270953 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +80,11 @@
 			children = (
 				81EBEC03266F89AE00270953 /* AppDelegate.swift */,
 				81EBEC05266F89AE00270953 /* SceneDelegate.swift */,
-				81EBEC07266F89AE00270953 /* ViewController.swift */,
+				8145FF192672360600B7B3A9 /* Question.swift */,
+				8145FF152671F45400B7B3A9 /* Game.swift */,
+				8145FF172671F46F00B7B3A9 /* GameSession.swift */,
+				816B5C4626724E0D003E2DC9 /* Controllers */,
+				8145FF1F2672443C00B7B3A9 /* ScoreCell.swift */,
 				81EBEC09266F89AE00270953 /* Main.storyboard */,
 				81EBEC0C266F89AF00270953 /* Assets.xcassets */,
 				81EBEC0E266F89AF00270953 /* LaunchScreen.storyboard */,
@@ -137,9 +163,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81EBEC08266F89AE00270953 /* ViewController.swift in Sources */,
+				81EBEC08266F89AE00270953 /* MainVC.swift in Sources */,
 				81EBEC04266F89AE00270953 /* AppDelegate.swift in Sources */,
+				8145FF182671F46F00B7B3A9 /* GameSession.swift in Sources */,
+				8145FF1A2672360600B7B3A9 /* Question.swift in Sources */,
+				8145FF1C267242A600B7B3A9 /* GameVC.swift in Sources */,
+				8145FF1E267243DA00B7B3A9 /* ScoreVC.swift in Sources */,
 				81EBEC06266F89AE00270953 /* SceneDelegate.swift in Sources */,
+				8145FF202672443C00B7B3A9 /* ScoreCell.swift in Sources */,
+				8145FF162671F45400B7B3A9 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

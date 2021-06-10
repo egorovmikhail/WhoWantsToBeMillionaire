@@ -1,19 +1,18 @@
 //
-//  ViewController.swift
+//  GameVC.swift
 //  WhoWantsToBeMillionaire
 //
-//  Created by Михаил Егоров on 08.06.2021.
+//  Created by Михаил Егоров on 10.06.2021.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
+    
 }
-

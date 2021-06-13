@@ -1,17 +1,15 @@
 //
-//  ScoreCell.swift
+//  GameCell.swift
 //  WhoWantsToBeMillionaire
 //
-//  Created by Михаил Егоров on 12.06.2021.
+//  Created by Михаил Егоров on 13.06.2021.
 //
 
 import UIKit
 
-class ScoreCell: UITableViewCell {
+class GameCell: UITableViewCell {
 
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    
+    @IBOutlet weak var answerLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

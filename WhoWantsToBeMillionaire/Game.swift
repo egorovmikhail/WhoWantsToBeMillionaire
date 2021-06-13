@@ -9,6 +9,8 @@ import Foundation
 
 class Game {
     public static var shared = Game()
-    var gameSession: [GameSession] = []
-    private init() {}
+    private var gameSession: [GameSession] = []
+    private init() {
+
+    }
 }

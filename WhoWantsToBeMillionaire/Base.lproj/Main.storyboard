@@ -46,8 +46,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="z22-D4-F8l" kind="show" identifier="toGameVC" id="U8z-2B-tHm"/>
-                        <segue destination="kza-U2-NiU" kind="show" identifier="toScoreVC" id="w6J-J6-xsx"/>
+                        <segue destination="z22-D4-F8l" kind="presentation" identifier="toGameVC" modalPresentationStyle="fullScreen" id="U8z-2B-tHm"/>
+                        <segue destination="kza-U2-NiU" kind="presentation" identifier="toScoreVC" modalPresentationStyle="fullScreen" id="w6J-J6-xsx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,28 +59,71 @@
             <objects>
                 <viewController id="z22-D4-F8l" customClass="GameVC" customModule="WhoWantsToBeMillionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1D2-YW-sUM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какой, по утверждению очевидцев, стала на сутки вода в Москве-реке весной 1908 года?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy3-Bx-gkG">
+                                <rect key="frame" x="16" y="94" width="382" height="194"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5UY-hg-vgS">
+                                <rect key="frame" x="0.0" y="288" width="414" height="320"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="jt3-3e-iTL"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rdT-bW-ZFJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5UY-hg-vgS" firstAttribute="centerY" secondItem="1D2-YW-sUM" secondAttribute="centerY" id="9Hb-Mv-bYl"/>
+                            <constraint firstItem="5UY-hg-vgS" firstAttribute="leading" secondItem="rdT-bW-ZFJ" secondAttribute="leading" id="CMn-aG-XRI"/>
+                            <constraint firstItem="rdT-bW-ZFJ" firstAttribute="trailing" secondItem="5UY-hg-vgS" secondAttribute="trailing" id="Iiz-xk-MJE"/>
+                            <constraint firstItem="vy3-Bx-gkG" firstAttribute="top" secondItem="rdT-bW-ZFJ" secondAttribute="top" constant="50" id="OMu-oi-JQk"/>
+                            <constraint firstItem="rdT-bW-ZFJ" firstAttribute="trailing" secondItem="vy3-Bx-gkG" secondAttribute="trailing" constant="16" id="cuu-wn-nrP"/>
+                            <constraint firstItem="vy3-Bx-gkG" firstAttribute="leading" secondItem="rdT-bW-ZFJ" secondAttribute="leading" constant="16" id="jAd-6o-qyd"/>
+                            <constraint firstItem="5UY-hg-vgS" firstAttribute="top" secondItem="vy3-Bx-gkG" secondAttribute="bottom" id="zlw-ew-Oyj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cvh-b5-wuL"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="vy3-Bx-gkG" id="g9r-8d-WXy"/>
+                        <outlet property="tableView" destination="5UY-hg-vgS" id="HON-hv-WBN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7e-bl-0Pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="114"/>
+            <point key="canvasLocation" x="902.89855072463774" y="113.83928571428571"/>
         </scene>
         <!--ScoreVC-->
         <scene sceneID="f4p-0E-uDe">
             <objects>
                 <viewController id="kza-U2-NiU" customClass="ScoreVC" customModule="WhoWantsToBeMillionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lzu-o0-Q49">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DE7-n6-Cqq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jfh-cV-8HN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jfh-cV-8HN" firstAttribute="bottom" secondItem="DE7-n6-Cqq" secondAttribute="bottom" id="IVG-gE-UtI"/>
+                            <constraint firstItem="jfh-cV-8HN" firstAttribute="trailing" secondItem="DE7-n6-Cqq" secondAttribute="trailing" id="JF4-UA-5E0"/>
+                            <constraint firstItem="DE7-n6-Cqq" firstAttribute="leading" secondItem="jfh-cV-8HN" secondAttribute="leading" id="OTj-Vw-lFC"/>
+                            <constraint firstItem="DE7-n6-Cqq" firstAttribute="top" secondItem="jfh-cV-8HN" secondAttribute="top" id="ujN-ks-r56"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x7S-Ty-hJ7"/>
+                    <connections>
+                        <outlet property="tableView" destination="DE7-n6-Cqq" id="bXZ-73-lxn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcN-P0-37G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

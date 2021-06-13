@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct GameSession {
-    let date: Date
-    let score: Int
+class GameSession {
+    var date: Date
+    var score: Int
+    
+    init(date: Date, score: Int) {
+        self.date = date
+        self.score = score
+    }
 }

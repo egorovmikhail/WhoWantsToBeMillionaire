@@ -18,7 +18,7 @@ struct Answer {
     var correct: Bool = false
 }
 
-var questArray: [Question] = [
+var questionList: [Question] = [
     Question(question: "Как называется минимальная единица измерения информации?", answer: [Answer(name: "Бит", correct: true),Answer(name: "Бита"),Answer(name: "Битва"),Answer(name: "Битник")]),
     Question(question: "Как называют новый проект, требующий вложений для развития?", answer: [Answer(name: "Старленй"),Answer(name: "Стартер"),Answer(name: "Старпом"),Answer(name: "Стартап", correct: true)]),
     Question(question: "По какому критерию Байкал – мировой рекордсмен среди озер?", answer: [Answer(name: "Глубина", correct: true),Answer(name: "Площадь"),Answer(name: "Ширина"),Answer(name: "Температура")]),

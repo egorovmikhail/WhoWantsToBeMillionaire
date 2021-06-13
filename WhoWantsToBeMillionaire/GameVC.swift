@@ -13,15 +13,15 @@ class GameVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var questionArray = [Question]()
+    private var questionArray = [Question]()
     
-    var countCorrect: Int = 0
+    private var countCorrect: Int = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.questionArray = questArray
+        self.questionArray = questionList
         
         tableView.register(UINib(nibName: "GameCell", bundle: nil), forCellReuseIdentifier: "GameCell")
         
@@ -37,10 +37,6 @@ class GameVC: UIViewController {
 }
 
 extension GameVC: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         questionArray[0].answer.count
@@ -71,7 +67,6 @@ extension GameVC: UITableViewDelegate {
             } else {
                 questionLabel.text = questionArray[0].question
                 tableView.reloadData()
-                
             }
         } else {
             print(countCorrect)

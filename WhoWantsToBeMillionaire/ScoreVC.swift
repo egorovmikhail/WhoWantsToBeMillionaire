@@ -30,7 +30,7 @@ extension ScoreVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreCell", for: indexPath) as? ScoreCell {
-            cell.dateLabel.text = "8888"
+            cell.dateLabel.text = "\(Date())"
             cell.scoreLabel.text = "00000"
             return cell
         }

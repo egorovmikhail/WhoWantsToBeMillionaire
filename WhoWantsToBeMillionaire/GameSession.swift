@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GameSession {
+class GameSession: Codable {
     var date: Date
     var score: Int
     

@@ -25,13 +25,15 @@ class ScoreVC: UIViewController {
 
 extension ScoreVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 10
+        return Game.shared.gameSession.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreCell", for: indexPath) as? ScoreCell {
-            cell.dateLabel.text = "\(Date())"
-            cell.scoreLabel.text = "00000"
+            let session = Game.shared.gameSession[indexPath.row]
+            
+            cell.dateLabel.text = "\(session.date)"
+            cell.scoreLabel.text = "\(session.score)"
             return cell
         }
         return UITableViewCell()

@@ -62,6 +62,8 @@ extension GameVC: UITableViewDelegate {
             countCorrect += 1
             if questionArray.count < 1 {
                 print("Конец игры")
+                
+                Game.shared.addSession(session: GameSession(date: Date(), score: countCorrect))
                 print(countCorrect)
                 dismiss(animated: true, completion: nil)
             } else {
@@ -69,9 +71,9 @@ extension GameVC: UITableViewDelegate {
                 tableView.reloadData()
             }
         } else {
+            Game.shared.addSession(session: GameSession(date: Date(), score: countCorrect))
             print(countCorrect)
             dismiss(animated: true, completion: nil)     
         }
-    }
-    
+    }    
 }

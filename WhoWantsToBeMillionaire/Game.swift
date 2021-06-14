@@ -8,9 +8,22 @@
 import Foundation
 
 class Game {
-    public static var shared = Game()
-    private var gameSession: [GameSession] = []
+    static var shared = Game()
+    private let careTaker = Caretaker()
+    private(set) var gameSession: [GameSession] {
+        didSet {
+            careTaker.saveSession(session: gameSession)
+        }
+    }
     private init() {
-
+        gameSession = careTaker.loadSession() ?? []
+    }
+    
+    func addSession(session: GameSession) {
+        gameSession.append(session)
+    }
+    
+    func clearSession() {
+        gameSession.removeAll()
     }
 }

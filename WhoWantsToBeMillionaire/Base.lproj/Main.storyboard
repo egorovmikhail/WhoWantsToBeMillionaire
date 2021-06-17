@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiI-pb-lXL">
+                                <rect key="frame" x="354" y="54" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SiI-pb-lXL" secondAttribute="height" multiplier="1:1" id="4oQ-dZ-aC4"/>
+                                    <constraint firstAttribute="height" constant="40" id="Bsk-xG-6TP"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CH7-JL-Udf"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="K2q-T9-azK">
                                 <rect key="frame" x="145" y="385" width="124" height="126"/>
                                 <subviews>
@@ -37,22 +52,38 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущий результат:" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PV-HW-H8e">
+                                <rect key="frame" x="20" y="819" width="374" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Y1J-0a-4eM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9PV-HW-H8e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3Dv-Cq-jgo"/>
+                            <constraint firstItem="9PV-HW-H8e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8I8-VH-HRt"/>
+                            <constraint firstItem="SiI-pb-lXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="MSn-4q-vFO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SiI-pb-lXL" secondAttribute="trailing" constant="20" id="PeZ-ry-2SM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9PV-HW-H8e" secondAttribute="trailing" constant="20" id="PhL-8O-y4p"/>
                             <constraint firstItem="K2q-T9-azK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yg0-lK-4EU"/>
+                            <constraint firstItem="SiI-pb-lXL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="lHh-bc-Pxt"/>
                             <constraint firstItem="K2q-T9-azK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJn-Ox-ZpZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <segue destination="z22-D4-F8l" kind="presentation" identifier="toGameVC" modalPresentationStyle="fullScreen" id="U8z-2B-tHm"/>
                         <segue destination="kza-U2-NiU" kind="presentation" identifier="toScoreVC" modalPresentationStyle="formSheet" modalTransitionStyle="coverVertical" id="w6J-J6-xsx"/>
+                        <segue destination="Yus-cE-zSm" kind="show" identifier="toSettingsVC" id="o7D-Un-b4y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="114"/>
+            <point key="canvasLocation" x="93" y="114"/>
         </scene>
         <!--GameVC-->
         <scene sceneID="LHc-WB-BnJ">
@@ -98,6 +129,39 @@
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="113.83928571428571"/>
         </scene>
+        <!--SettingsVC-->
+        <scene sceneID="TGV-Yt-PIv">
+            <objects>
+                <viewController id="Yus-cE-zSm" customClass="SettingsVC" customModule="WhoWantsToBeMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r3j-3o-Kc0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vgj-Vb-6bd">
+                                <rect key="frame" x="20" y="20" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Просто"/>
+                                    <segment title="Сложно"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ka3-ny-grv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vgj-Vb-6bd" firstAttribute="top" secondItem="ka3-ny-grv" secondAttribute="top" constant="20" id="Mot-yQ-ISJ"/>
+                            <constraint firstItem="ka3-ny-grv" firstAttribute="trailing" secondItem="Vgj-Vb-6bd" secondAttribute="trailing" constant="20" id="bXq-ay-abv"/>
+                            <constraint firstItem="Vgj-Vb-6bd" firstAttribute="leading" secondItem="ka3-ny-grv" secondAttribute="leading" constant="20" id="lS2-zi-tvd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JlQ-ov-vBr"/>
+                    <connections>
+                        <outlet property="сomplexitySegmentedControl" destination="Vgj-Vb-6bd" id="5Ua-PN-kzW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLr-2s-b8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="860"/>
+        </scene>
         <!--ScoreVC-->
         <scene sceneID="f4p-0E-uDe">
             <objects>
@@ -131,6 +195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

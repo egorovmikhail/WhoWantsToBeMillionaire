@@ -40,5 +40,9 @@ class MainVC: UIViewController {
         performSegue(withIdentifier: "toScoreVC", sender: self)
     }
     
+    @IBAction func didTapSettings(_ sender: Any) {
+        performSegue(withIdentifier: "toSettingsVC", sender: self)
+    }
+    
 }
 
